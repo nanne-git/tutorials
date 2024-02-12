@@ -1,0 +1,13 @@
+<div id="editableText" contenteditable="true" style="border: 1px solid green; width: 500px; height: 500px;">
+</div>
+<input type="text">
+<script>
+    let editableText = document.getElementById("editableText");
+    editableText.addEventListener("paste", (event) => {
+        console.log(event.clipboardData.types);
+        console.log("html data is");
+        console.log(event.clipboardData.getData("text/html"));
+        console.log("text data is");
+        console.log(event.clipboardData.getData());
+    })
+</script>
